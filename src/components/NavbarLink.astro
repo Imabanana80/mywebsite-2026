@@ -1,0 +1,17 @@
+---
+interface Props {
+    page: String;
+}
+const {page} = Astro.props
+---
+<a 
+    href=`/${page}` 
+    class="font-bold
+    text-ctp-yellow hover:text-ctp-blue 
+    hover:underline 
+    ease-in hover:ease-out transition-all
+    ">{page}</a>
+
+
+
+

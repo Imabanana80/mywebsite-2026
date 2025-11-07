@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@import "tailwindcss";
+@import "@catppuccin/tailwindcss/mocha.css";
+
+@theme {
+    --color-transparent: "transparent";
+    --ease-in: cubic-bezier(0,0.69,0.31,1.63);
+    --ease-out: cubic-bezier(0,0.69,0.44,0.99);
+    --default-font-family: "JetBrains Mono", monospaced;
+}
