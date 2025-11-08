@@ -3,9 +3,13 @@ interface Props {
     page: String;
 }
 const {page} = Astro.props
+var href = page
+if (href == "home") {
+    href = ""
+}
 ---
 <a 
-    href=`/${page}` 
+    href=`/${href}` 
     class="font-bold
     text-ctp-yellow hover:text-ctp-blue 
     hover:underline 
