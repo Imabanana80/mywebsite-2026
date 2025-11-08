@@ -1,7 +1,8 @@
 ---
 import Tag from '../components/Tag.astro';
-import { Github, Twitch, Youtube, Icon } from '@lucide/astro'
+import { Github, Spool, Icon } from '@lucide/astro'
 import { butterfly } from '@lucide/lab'
+
 ---
 <div class="flex flex-col col-span-2 border border-ctp-surface0 gap-[-1px] w-full h-min">
     <span class="p-4 pb-0 border-b border-ctp-surface0 relative">
@@ -19,27 +20,26 @@ import { butterfly } from '@lucide/lab'
                 <a href="https://github.com/imabanana80">
                     <Github size="20" 
                         class="stroke-ctp-green hover:rotate-15 ease-in hover:ease-out transition-transform"/></a>
+                <a href="https://tangled.org/@banana.tngl.sh/">
+                    <Spool size="20" 
+                        class="stroke-ctp-lavender hover:rotate-15 ease-in hover:ease-out transition-transform"/></a>
+
+                </a>
                 <a href="https://bsky.app/profile/imabanana80.com">
                     <Icon iconNode={butterfly} size="20" 
                         class="stroke-ctp-sapphire hover:rotate-15 ease-in hover:ease-out transition-transform"/></a>
-                <a href="https://twitch.tv/imabanana80">
-                    <Twitch size="20" 
-                        class="stroke-ctp-mauve hover:rotate-15 ease-in hover:ease-out transition-transform"/></a>
-                <a href="https://youtube.com/@imabanana80">
-                    <Youtube size="20" 
-                        class="stroke-ctp-red hover:rotate-15 ease-in hover:ease-out transition-transform"/></a>
-            </span>
+           </span>
+        </span>
+        <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
+            <Tag name="Currently"/>
+            Learning Svelte | Open for Hire
         </span>
         <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
             <Tag name="About"/>
             Hi, I'm Banana, a computer science student and software developer that specialises in 
             Web Development as well as developing and hosting Minecraft Events.
         </span>
-        <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
-            <Tag name="Currently"/>
-            Learning Svelte | Open for Hire
-        </span>
-        <span class="relative p-3 -mt-px border border-ctp-surface0 text-ctp-subtext0 text-sm">
+        <span class="relative p-3 mt-4 border border-ctp-surface0 text-ctp-subtext0 text-sm">
             <Tag name="Time"/>
             <span id="clock" class="text-ctp-text"></span> (SGT/UTC+8)
         </span>
