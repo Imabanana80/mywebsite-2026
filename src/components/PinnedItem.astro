@@ -1,0 +1,46 @@
+---
+interface Badge {
+    icon: string,
+    href: string
+    color: string
+}
+
+interface Props {
+    type: string
+    icon: string,
+    title: string,
+    subtitle: string,
+    href: string
+    badges: Badge[]
+}
+
+const { type, title, subtitle, icon, badges, href } = Astro.props
+
+var color
+if (type=="project") {
+    color = "--catppuccin-color-red"
+} else if (type=="repo") {
+    color = "--catppuccin-color-peach"
+} else if (type=="team") {
+    color = "--catppuccin-color-mauve"
+} else if (type=="misc") {
+    color = "--catppuccin-color-maroon"
+}
+color = "var(" + color + ")"
+
+import LucideIcon from "./LucideIcon.astro";
+import Badgebar from "./Badgebar.astro"
+---
+<div class="p-4 border border-ctp-surface0 flex flex-col -mt-px w-full">
+    <div class="flex justify-between gap-16">
+        <a href=`${href}` class="flex flex-col gap-1 group">
+            <span class="text-xl flex gap-2 items-center font-bold group-hover:underline">
+                <LucideIcon name=`${icon}` width="20" height="20" style={`stroke:${color}`} /> {title}</span>
+            <span class="text-sm">
+                <span class="flex gap-1">{subtitle}</span>
+            </span>
+        </a>
+        <Badgebar badges={badges} size="20"/>    
+    </div>
+</div>
+

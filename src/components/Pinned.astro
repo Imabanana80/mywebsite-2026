@@ -1,0 +1,72 @@
+---
+import Tag from "./Tag.astro"
+import Item from "./PinnedItem.astro"
+---
+
+<div class="flex flex-col p-8 border-ctp-surface0 border w-full h-min relative">
+    <Tag name="Pinned"/>
+    <div class="flex flex-wrap">
+        <Item
+            type="project"
+            title="IsleStats"
+            subtitle="An MCC Island Discord statistics bot that renders beautiful stat cards to show off your stats."
+            icon="Archive"
+            href="https://islestats.net"
+            badges={[
+                {
+                    icon: "Github",
+                    href: "https://github.com/islestats",
+                    color: "var(--catppuccin-color-green)"
+                },
+                {
+                    icon: "MessageCircle",
+                    href: "https://discord.gg//islestats",
+                    color: "var(--catppuccin-color-blue)"
+                },
+                {
+                    icon: "Mail",
+                    href: "mailto:contact@islestats.net",
+                    color: "var(--catppuccin-color-maroon)"
+                }
+            ]}
+        />
+        <Item
+            type="team"
+            title="potassium.sh"
+            subtitle="An indie software development studio for the creative and insane, founded by me!"
+            icon="Users"
+            href="https://tangled.org/@banana.tngl.sh/dotfiles"
+            badges={[
+                {
+                    icon: "Mail",
+                    href: "mailto:team@potassium.sh",
+                    color: "var(--catppuccin-color-maroon)"
+                },
+                {
+                    icon: "Spool",
+                    href: "https://tangled.org/@potassium.sh",
+                    color: "var(--catppuccin-color-lavender)"
+                },
+                {
+                    icon: "Bird",
+                    href: "https://bsky.app/profile/potassium.sh",
+                    color: "var(--catppuccin-color-sapphire)"
+                },
+            ]}
+        />
+        <Item
+            type="repo"
+            title="dotfiles"
+            subtitle="My personal configuration dotfiles for endeavouros linux."
+            icon="BookMarked"
+            href="https://tangled.org/@banana.tngl.sh/dotfiles"
+            badges={[
+                {
+                    icon: "Book",
+                    href: "https://wiki.archlinux.org/title/Dotfiles",
+                    color: "var(--catppuccin-color-sapphire)"
+                },
+            ]}
+        />
+    </div>
+</div>
