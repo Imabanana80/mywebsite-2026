@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+const urlPathname = Astro.url.pathname
+const urlOrigin = Astro.url.origin
+const userAgent = Astro.request.headers.get('User-Agent') || 'Unknown User-Agent';
+const astroGenerator = Astro.generator
+const currentISODate = new Date().toISOString();
+---
+
+<Layout>
+    <section class="h-svh items-center flex pl-32 pr-32 ">
+        <div class="flex justify-between gap-8 w-full items-end">
+            <span class="text-9xl w-min">404 Not Found</span>
+            <div class="text-ctp-overlay0 flex flex-col items-end text-base p-4">
+                <span>HTTP/1.1 404 Not Found</span>
+                <span>Server: {astroGenerator}</span>
+                <span>Connection: keep-alive</span>
+                <span>Date: {currentISODate}</span>
+                <span>Content-Type: text/html; charset=utf-8</span>
+                <span>X-Request-Path: {urlPathname}</span>
+                <span>X-User-Agent: {userAgent}</span>
+                <span>X-Request-Origin: {urlOrigin}</span>
+            </div>
+        </div>
+    </section>
+</Layout>
