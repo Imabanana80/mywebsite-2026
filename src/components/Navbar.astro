@@ -1,5 +1,6 @@
 ---
 import Btn from "./NavbarLink.astro"
+import { Code } from "@lucide/astro"
 
 let href = Astro.url.toString()
 href = href.replace(Astro.url.host.toString(), "")
@@ -9,7 +10,11 @@ href = href.replace("http://", "")
 <div class="absolute bg-ctp-base w-full pl-8 pr-8 pt-4 pb-4 flex justify-between rounded-bl-2xl rounded-br-2xl">
     <div class="flex gap-4 items-center">
         <a href="/doodlecat.png"><img src="doodlecat.png" width="48px" height="48px" class="rounded-full" /></a>
-        <span>~/banana{href}</span>
+        <span class="flex flex-col">
+            <span>~/banana{href}</span>
+            <a href="https://tangled.org/@banana.tngl.sh/mywebsite-2026"
+                class="text-xs text-ctp-overlay0 flex gap-1 hover:underline"><Code size="16" />src</a>
+        </span>
     </div>
     <div class="flex gap-6 items-center">
         <Btn page="home"/>
