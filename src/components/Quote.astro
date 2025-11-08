@@ -1,0 +1,31 @@
+---
+import Tag from "../components/Tag.astro"
+---
+<script>
+    interface Quote {
+        quote: string,
+        quotee: string,
+    }
+    const quoteElement = document.getElementById("quote") as HTMLElement
+    const quoteeElement = document.getElementById("quotee") as HTMLElement
+
+    const quotes: Quote[] = [
+        { quote: "America is a nation that can be defined in a single word: asufutimaehaehfutbw", quotee: "Joseph Robinette Biden Jr."},
+        { quote: "What if they- what if anything- what if a bomb drops on your head right now?", quotee: "Donald John Trump"},
+        { quote: "Heh heh heh, oh it's focused. I say it's err- I think it's- I- I- I haven't-- look.", quotee: "Joseph Robinette Biden Jr."},
+        { quote: "the color orange is named after the fruit", quotee: "Elon Reeve Musk" },
+        { quote: "I'm excited about electric school busses, I love electric school busses, I just love them..", quotee: "Kamala Devi Harris"},
+        { quote: "One thing that really encourages me is AI. I love AI. I love ChatGPT. I love it. ChatGPT is frankly fantastic.", quotee: "Alexander Boris de Pfeffel Johnson" },
+    ]
+    const quote: Quote = quotes[Math.floor(Math.random()*quotes.length)]
+
+    quoteElement.textContent = '"' + quote.quote + '"'
+    quoteeElement.textContent = "- " + quote.quotee
+</script>
+<span class="relative p-3 -mt-px border border-ctp-surface0 text-ctp-subtext0 text-sm w-full">
+    <Tag name="Quote"/>
+    <div class="flex flex-col text-sm gap-1">
+        <span id="quote" class="italic"></span>
+        <span id="quotee" class="w-full text-right"></span>
+    </div>
+</span>

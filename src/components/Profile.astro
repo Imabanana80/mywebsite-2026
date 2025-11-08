@@ -1,8 +1,8 @@
 ---
 import Tag from '../components/Tag.astro';
+import Quote from '../components/Quote.astro'
 import { Github, Spool, Icon } from '@lucide/astro'
 import { butterfly } from '@lucide/lab'
-
 ---
 <div class="flex flex-col col-span-2 border border-ctp-surface0 gap-[-1px] w-full h-min">
     <span class="p-4 pb-0 border-b border-ctp-surface0 relative">
@@ -32,7 +32,7 @@ import { butterfly } from '@lucide/lab'
         </span>
         <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
             <Tag name="Currently"/>
-            Learning Svelte | Open for Hire
+            Switching to endeavoros | Open for Hire
         </span>
         <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
             <Tag name="About"/>
@@ -43,6 +43,21 @@ import { butterfly } from '@lucide/lab'
             <Tag name="Time"/>
             <span id="clock" class="text-ctp-text"></span> (SGT/UTC+8)
         </span>
+        <span class="relative p-3 mt-4 border border-ctp-surface0 text-ctp-subtext0 text-sm">
+            <Tag name="Languages"/>
+            <span>Java, Python, Golang, HTML/CSS/TS</span>
+        </span>
+        <span class="relative p-3 -mt-px border border-ctp-surface0 text-ctp-subtext0 text-sm">
+            <Tag name="Frameworks"/>
+            <span>PaperMC, Astro, Tailwindcss</span>
+        </span>
+        <span class="relative p-3 -mt-px border border-ctp-surface0 text-ctp-subtext0 text-sm">
+            <Tag name="Tools"/>
+            <span>Neovim, IntellIJ, Figma, VSC*de</span>
+        </span>
+        <div class="mt-4 flex">
+            <Quote />
+        </div>
     </div >
 </div>
 
