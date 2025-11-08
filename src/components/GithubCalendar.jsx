@@ -5,11 +5,11 @@ export default function GitHubWrapper({ username, ...props }) {
 
   const theme = {
   dark: [
-    '#11111b', 
-    '#2b7a24',
-    '#41b536',
-    '#6FD166',
-    '#A6E3A1',
+    'var(--catppuccin-color-crust)', 
+    'var(--catppuccin-color-green-900)',
+    'var(--catppuccin-color-green-500)',
+    'var(--catppuccin-color-green-200)',
+    'var(--catppuccin-color-green-50)',
   ],
    };
   React.useEffect(() => {
@@ -23,6 +23,6 @@ export default function GitHubWrapper({ username, ...props }) {
   }
 
   return <GitHubCalendar username={username} theme={theme} 
-        blockMargin={4} blockRadius={8} blockSize={10} 
+        blockMargin={3} blockRadius={1} blockSize={10} 
         {...props} />;
 }
