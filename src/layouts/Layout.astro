@@ -1,6 +1,7 @@
 ---
 import "../styles/global.css"
 import Navbar from "../components/Navbar.astro"
+import Footer from "../components/Footer.astro"
 ---
 <!doctype html>
 <html lang="en">
@@ -14,8 +15,9 @@ import Navbar from "../components/Navbar.astro"
 	<body class="bg-ctp-crust pl-[12%] pr-[12%] text-ctp-text">
         <main class="w-full min-h-full max-h-max bg-ctp-mantle relative">
             <Navbar/>
-		    <slot />
+            <slot />
         </main>
+        <Footer />
 	</body>
 </html>
 <script>
