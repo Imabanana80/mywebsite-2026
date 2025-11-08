@@ -22,5 +22,7 @@ export default function GitHubWrapper({ username, ...props }) {
     return <div>Loading GitHub calendar...</div>;
   }
 
-  return <GitHubCalendar username={username} theme={theme} blockMargin={4} blockRadius={8} blockSize={10} {...props} />;
+  return <GitHubCalendar username={username} theme={theme} 
+        blockMargin={4} blockRadius={8} blockSize={10} 
+        {...props} />;
 }

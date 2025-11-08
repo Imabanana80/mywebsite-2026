@@ -2,15 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Profile from "../components/Profile.astro";
 
-import GitHubCalendar from '../components/GithubCalendar';
+import Contributions from "../components/Contributions.astro"
 ---
 <Layout>
-    <section class="h-[50%] grid-cols-5 grid p-32 gap-12">
+    <section class="h-[50%] grid-cols-5 grid p-32 pt-48 gap-12">
         <Profile/>
         <div class="col-span-3 gap-8 flex flex-col">
-            <div class="flex flex-col p-8 border-ctp-surface0 border w-full h-min">
-                <GitHubCalendar client:load username="imabanana80"/>
-            </div>
+            <Contributions/>
         </div>
     </section>
 </Layout>

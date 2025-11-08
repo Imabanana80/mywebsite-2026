@@ -1,0 +1,9 @@
+---
+import Tag from "./Tag.astro"
+import GitHubCalendar from "./GithubCalendar"
+---
+
+<div class="flex flex-col p-8 border-ctp-surface0 border w-full h-min relative">
+    <Tag name="Contributions"/>
+    <GitHubCalendar client:load username="imabanana80"/>
+</div>
