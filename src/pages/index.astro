@@ -1,42 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Profile from "../components/Profile.astro"
+import Profile from "../components/Profile.astro";
+
+import GitHubCalendar from '../components/GithubCalendar';
 ---
-<script>
-const clockElement: HTMLElement | null = document.getElementById("clock");
-
-if (!clockElement) {
-    console.error(`Error: Clock element with ID "clock" not found.`);
-}
-
-const displayTime = (): void => {
-    const now: Date = new Date();
-
-    const options: Intl.DateTimeFormatOptions = {
-    hour: '2-digit',     
-    minute: '2-digit',  
-    second: '2-digit', 
-    hour12: false,    
-    timeZone: "Asia/Singapore"
-    };
-
-    const timeString: string = now.toLocaleTimeString('en-US', options);
-    clockElement.textContent = timeString;
-};
-displayTime();
-setInterval(displayTime, 1000);
-</script>
 <Layout>
     <section class="h-[50%] grid-cols-5 grid p-32 gap-12">
         <Profile/>
-        <div class="flex flex-col col-span-3 gap-3 p-8 border-ctp-surface0 border h-min">
-            <span class="text-5xl font-semibold">
-                Hi, I'm Banana.
-            </span>
-            <span class='text-lg'>
-                I'm a computer science student and software developer that specialises in 
-                Web Development as well as developing and hosting Minecraft Events.
-            </span>
+        <div class="col-span-3 gap-8 flex flex-col">
+            <div class="flex flex-col p-8 border-ctp-surface0 border w-full h-min">
+                <GitHubCalendar client:load username="imabanana80"/>
+            </div>
         </div>
     </section>
 </Layout>
