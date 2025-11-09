@@ -1,5 +1,5 @@
 ---
-import Tag from "../components/Tag.astro"
+import Label from "../components/Label.astro"
 ---
 <script>
     interface Quote {
@@ -23,7 +23,7 @@ import Tag from "../components/Tag.astro"
     quoteeElement.textContent = "- " + quote.quotee
 </script>
 <span class="relative p-3 -mt-px border border-ctp-surface0 text-ctp-subtext0 text-sm w-full">
-    <Tag name="Quote"/>
+    <Label name="Quote"/>
     <div class="flex flex-col text-sm gap-1">
         <span id="quote" class="italic"></span>
         <span id="quotee" class="w-full text-right"></span>
