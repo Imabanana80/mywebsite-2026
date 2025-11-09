@@ -16,7 +16,7 @@ const { badges, size } = Astro.props
 ---
 <span class="flex gap-2 bg-ctp-crust p-2 pl-3 pr-3 rounded-full h-min">
     {badges.map(badge => 
-    <a href=`${badge.href}`>
+    <a href=`${badge.href}` target="_blank" rel="noopener noreferrer">
         <LucideIcon name=`${badge.icon}` width=`${size}` height=`${size}` style={`stroke:${badge.color}`} 
             class="hover:rotate-15 ease-in hover:ease-out transition-transform"
         />

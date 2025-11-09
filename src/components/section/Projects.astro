@@ -1,0 +1,19 @@
+---
+import Label from "../Label.astro"
+let projects = Object.values(import.meta.glob('../projects/*.astro', { eager: true }));
+
+projects = projects.sort((a, b) => {
+    const projectA = a.priority ?? Infinity;
+    const projectB = b.priority ?? Infinity;
+
+    return projectA - projectB
+})
+---
+<div class="flex flex-col p-8 border-ctp-surface0 border w-full h-min relative">
+    <Label name="Projects"/>
+    <div class="flex flex-wrap gap-4">
+        {projects.map(Project => (
+            <Project.default />
+        ))}
+    </div>
+</div>

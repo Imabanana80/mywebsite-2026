@@ -1,0 +1,24 @@
+---
+import Item from "../PortfolioItem.astro"
+export const priority = 1;
+---
+<Item
+    type="repo"
+    title="dotfiles"
+    subtitle="My personal configuration dotfiles for endeavouros linux."
+    href="https://tangled.org/@banana.tngl.sh/dotfiles"
+    badges={[
+        {
+            icon: "Github",
+            href: "https://github.com/imabanana80/dotfiles",
+            color: "var(--catppuccin-color-green)"
+        },
+
+        {
+            icon: "Book",
+            href: "https://wiki.archlinux.org/title/Dotfiles",
+            color: "var(--catppuccin-color-sapphire)"
+        },
+    ]}
+/>
+

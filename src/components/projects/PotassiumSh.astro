@@ -1,0 +1,29 @@
+---
+import Item from "../PortfolioItem.astro"
+export const priority = 2;
+---
+<Item
+    type="team"
+    title="potassium.sh"
+    subtitle="An indie software development studio for the creative and insane, founded by me!"
+    href="https://tangled.org/@banana.tngl.sh/dotfiles"
+    tag="Founder"
+    tagcolor="--catppuccin-color-rosewater"
+    badges={[
+        {
+            icon: "Mail",
+            href: "mailto:team@potassium.sh",
+            color: "var(--catppuccin-color-maroon)"
+        },
+        {
+            icon: "Spool",
+            href: "https://tangled.org/@potassium.sh",
+            color: "var(--catppuccin-color-lavender)"
+        },
+        {
+            icon: "Bird",
+            href: "https://bsky.app/profile/potassium.sh",
+            color: "var(--catppuccin-color-sapphire)"
+        },
+    ]}
+/>

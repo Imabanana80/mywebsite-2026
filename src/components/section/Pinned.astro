@@ -1,37 +1,14 @@
 ---
 import Label from "../Label.astro"
 import Item from "../PortfolioItem.astro"
+import Dotfiles from "../projects/Dotfiles.astro"
+import IsleStats from "../projects/IsleStats.astro"
 ---
 
 <div class="flex flex-col p-8 border-ctp-surface0 border w-full h-min relative">
     <Label name="Pinned"/>
     <div class="flex flex-wrap">
-        <Item
-            type="project"
-            title="IsleStats"
-            subtitle="An MCC Island Discord statistics bot that renders beautiful stat cards to show off your stats."
-            icon="Archive"
-            href="https://islestats.net"
-            tag="Python"
-            tagcolor="--catppuccin-color-blue"
-            badges={[
-                {
-                    icon: "Github",
-                    href: "https://github.com/islestats",
-                    color: "var(--catppuccin-color-green)"
-                },
-                {
-                    icon: "MessageCircle",
-                    href: "https://discord.gg//islestats",
-                    color: "var(--catppuccin-color-blue)"
-                },
-                {
-                    icon: "Mail",
-                    href: "mailto:contact@islestats.net",
-                    color: "var(--catppuccin-color-maroon)"
-                }
-            ]}
-        />
+        <IsleStats/>
         <Item
             type="team"
             title="potassium.sh"
@@ -58,19 +35,6 @@ import Item from "../PortfolioItem.astro"
                 },
             ]}
         />
-        <Item
-            type="repo"
-            title="dotfiles"
-            subtitle="My personal configuration dotfiles for endeavouros linux."
-            icon="BookMarked"
-            href="https://tangled.org/@banana.tngl.sh/dotfiles"
-            badges={[
-                {
-                    icon: "Book",
-                    href: "https://wiki.archlinux.org/title/Dotfiles",
-                    color: "var(--catppuccin-color-sapphire)"
-                },
-            ]}
-        />
+        <Dotfiles />
     </div>
 </div>
