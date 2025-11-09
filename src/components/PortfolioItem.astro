@@ -16,7 +16,7 @@ interface Props {
     badges?: Badge[]
 }
 
-const { type, icon, title, subtitle, tag, tagcolor, href, badges } = Astro.props
+const { type, icon = "Box", title, subtitle, tag, tagcolor, href, badges } = Astro.props
 
 var color = "--catppuccin-color-yellow"
 if (type=="project") {
@@ -33,25 +33,26 @@ if (type=="project") {
 const colorCss = "var(" + color + ")"
 
 var iconName = icon
-if (type=="project") {
-    iconName = "Archive" 
-} else if (type=="repo") {
-    iconName = "BookMarked"
-} else if (type=="team") {
-    iconName = "Users"
-} else if (type=="misc") {
-    color = "Box"
-} else if (type=="freelance") {
-    color = "ReceiptText"
+if (iconName == "Box") {
+    if (type=="project") {
+        iconName = "Archive" 
+    } else if (type=="repo") {
+        iconName = "BookMarked"
+    } else if (type=="team") {
+        iconName = "Users"
+    } else if (type=="misc") {
+        iconName = "Box"
+    } else if (type=="freelance") {
+        iconName = "ReceiptText"
+    }
 }
 
-
-import LucideIcon from "./LucideIcon.astro";
+import LucideIcon from "./LucideIcon.astro"
 import Badgebar from "./Badgebar.astro"
 import Tag from "./Tag.astro"
 ---
 <div class="p-4 border border-ctp-surface0 flex flex-col -mt-px w-full">
-    <div class="flex justify-between gap-16">
+    <div class="flex justify-between gap-8">
         <a href=`${href}` class="flex flex-col gap-1 group">
             <span class="text-xl flex gap-2 items-center">
                 <LucideIcon name=`${iconName}` width="20" height="20" style={`stroke:${colorCss}`} /> 
