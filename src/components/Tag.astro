@@ -1,0 +1,14 @@
+---
+interface Props {
+    text: string
+    color: string
+}
+
+const { text, color } = Astro.props
+const bgColorCss = "var(" + color + "-950)"
+const borderColorCss = "var(" + color + "-800)"
+---
+<span class="p-0.5 pl-2 pr-2 border text-xs rounded-full scale-95 font-extrabold" 
+    style={`background:${bgColorCss};border-color:${borderColorCss};`}>
+    {text}
+</span>
