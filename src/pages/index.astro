@@ -1,16 +1,10 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Profile from "../components/Profile.astro";
+import Page from '../layouts/Page.astro';
 
-import Contributions from "../components/Contributions.astro"
-import Pinned from "../components/Pinned.astro"
+import Contributions from "../components/section/Contributions.astro"
+import Pinned from "../components/section/Pinned.astro"
 ---
-<Layout>
-    <section class="h-[50%] grid-cols-5 grid p-24 pt-48 gap-16">
-        <Profile/>
-        <div class="col-span-3 gap-12 flex flex-col">
-            <Contributions/>
-            <Pinned/>
-        </div>
-    </section>
-</Layout>
+<Page>
+    <Contributions/>
+    <Pinned/>
+</Page>

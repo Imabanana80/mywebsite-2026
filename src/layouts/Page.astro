@@ -1,0 +1,12 @@
+---
+import Layout from './Layout.astro';
+import Profile from "../components/section/Profile.astro";
+---
+<Layout>
+    <section class="h-[50%] grid-cols-5 grid p-24 pt-48 gap-16">
+        <Profile/>
+        <div class="col-span-3 gap-12 flex flex-col">
+            <slot/>
+        </div>
+    </section>
+</Layout>
