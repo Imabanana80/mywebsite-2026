@@ -1,0 +1,62 @@
+---
+import Label from "../Label.astro"
+import { Disc } from "@lucide/astro"
+---
+<div class="border border-ctp-surface0 p-8 pt-6 pb-6 relative">
+    <Label name="Music Player" />
+    <div id="music">
+        <audio
+            id="audio"
+            controls
+            src="/celeste_exhale.mp3"
+            class="hidden"
+        ></audio>
+        <div class="mb-1">
+            <span class="text-base flex gap-2 items-center w-fit">
+                    <Disc size="20" class="stroke-ctp-pink"/>
+                Celeste - Exhale
+            <span class="text-sm text-ctp-overlay0">by Lena Raine</span>
+            </span>
+        </div>
+        <div id="controls" class="flex gap-1">
+            <button id="control-button" class=""><img id="control-img" src="/play.svg"></button>
+            <div id="progress-bar" class="self-center border border-ctp-surface1 w-full h-1">
+                <div id="progress" class="bg-ctp-subtext0 h-[0.25rem] w-0"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    const controlButton = document.getElementById("control-button") as HTMLElement
+    const controlImg = document.getElementById("control-img") as HTMLImageElement
+    const audio = document.getElementById("audio") as HTMLAudioElement
+    const progressBar = document.getElementById("progress-bar") as HTMLElement
+    const progress = document.getElementById("progress") as HTMLElement
+
+    controlButton.addEventListener("click", () => {
+        if (audio.paused) {
+            audio.play();
+            controlImg.src = "/pause.svg"
+        } else {
+            audio.pause();
+            controlImg.src = "/play.svg"
+        }
+    });
+
+    audio.addEventListener("timeupdate", () => {
+        progress.style.width = `${(audio.currentTime / audio.duration) * 100}%`;
+    });
+
+    audio.addEventListener("ended", () => {
+        audio.currentTime = 0;
+        progress.style.width = "0%";
+        audio.play();
+    });
+
+    progressBar.addEventListener("click", (e) => {
+        const clickPosition =
+            (e.offsetX / progressBar.clientWidth) * audio.duration;
+        audio.currentTime = clickPosition;
+    });
+</script>
+
