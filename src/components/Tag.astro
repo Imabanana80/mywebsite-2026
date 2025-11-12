@@ -7,7 +7,7 @@ interface Props {
 const { text, color } = Astro.props
 const colorCss = "var(" + color + "-700)"
 ---
-<span class="p-1 pl-2 pr-2 text-xs rounded-full scale-95 font-bold bg-ctp-base border border-ctp-surface0" 
+<span class="p-1 pl-2 pr-2 text-xs rounded-full font-bold bg-ctp-base border border-ctp-surface0" 
     style={`color:${colorCss};`}>
     {text}
 </span>

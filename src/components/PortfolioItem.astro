@@ -57,7 +57,7 @@ import Tag from "./Tag.astro"
             <span class="text-xl flex gap-2 items-center">
                 <LucideIcon name=`${iconName}` width="20" height="20" style={`stroke:${colorCss}`} /> 
                 <span class="group-hover:underline font-bold">{title} </span>
-                <span class="hidden md:block">
+                <span class="hidden md:flex items-center">
                 {tag && tagcolor && (
                     <Tag text={tag} color={tagcolor}/>
                 )}
