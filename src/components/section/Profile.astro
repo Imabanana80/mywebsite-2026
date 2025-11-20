@@ -3,8 +3,13 @@ import Label from '../Label.astro';
 import Quote from './Quote.astro'
 import BadgeBar from "../Badgebar.astro"
 import Butterfly from "../../assets/butterfly.svg"
+
+let home = "hidden lg:flex" 
+if (Astro.url.pathname == "/") {
+    home = "flex"
+}
 ---
-<div class="flex flex-col md:col-span-2 border border-ctp-surface0 gap-[-1px] w-full h-min">
+<div class=`${home} flex-col md:col-span-2 border border-ctp-surface0 gap-[-1px] w-full h-min`>
     <span class="p-4 pb-0 border-b border-ctp-surface0 relative">
         <img src="/banner.png" class="w-full"/>
     </span>
