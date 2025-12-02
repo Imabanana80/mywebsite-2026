@@ -8,3 +8,7 @@
     --ease-out: cubic-bezier(0,0.69,0.44,0.99);
     --default-font-family: "JetBrains Mono", monospaced;
 }
+
+.squircle {
+    corner-shape: squircle
+}
