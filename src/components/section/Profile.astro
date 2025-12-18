@@ -46,7 +46,7 @@ if (Astro.url.pathname == "/") {
         </span>
         <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
             <Label name="Currently"/>
-            Switching to endeavoros | Open for Hire
+            Daily driving archlinux | Open for Hire
         </span>
         <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
             <Label name="About"/>
@@ -97,6 +97,7 @@ const displayTime = (): void => {
     const timeString: string = now.toLocaleTimeString('en-US', options);
     clockElement.textContent = timeString;
 };
+
 displayTime();
 setInterval(displayTime, 1000);
 </script>
