@@ -1,18 +1,21 @@
 ---
 import { Heart, Rocket, Copyright, Code } from "@lucide/astro"
 ---
-<div class="flex justify-between bg-ctp-base p-6 pl-12 pr-12">
-    <span class="inline-flex gap-2 items-center">
+<div class="flex justify-between bg-ctp-base 
+    p-4 pl-8 pr-8
+    md:p-6 md:pl-10 md:pr-10 
+    lg:p-6 lg:pl-12 lg:pr-12">
+    <span class="inline-flex gap-2 items-center scale-70 sm:scale-80 md:scale-90 lg:scale-100">
         Copyright 
         <Copyright size="20" class="stroke-ctp-text"/>
         2026 Banana
     </span>
-    <span class="inline-flex gap-2 items-center">
+    <span class="hidden md:inline-flex gap-2 items-center sm:scale-80 md:scale-90 scale-100">
         <a href="https://tangled.org/@banana.tngl.sh/mywebsite-2026"
             class="text-xs text-ctp-overlay0 flex gap-1 hover:underline"><Code size="16" />src</a>
 
     </span>
-    <span class="inline-flex gap-2 items-center">
+    <span class="inline-flex gap-2 items-center scale-70 sm:scale-80 md:scale-90 lg:scale-100">
         Made with
         <Heart size="20" class="stroke-ctp-red"/>
         using Astro
