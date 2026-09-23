@@ -25,28 +25,27 @@ if (Astro.url.pathname == "/") {
             <BadgeBar 
                 badges={[
                     {
+                        icon: "GitBranchPlus",
+                        color: "var(--catppuccin-color-peach)",
+                        href: "https://git.potassium.sh"
+                    },
+                    {
                         icon: "Github",
                         color: "var(--catppuccin-color-green)",
                         href: "https://github.com/imabanana80"
                     },
                     {
                         icon: "Spool",
-                        color: "var(--catppuccin-color-lavender)",
-                        href: "https://tangled.org/@banana.tngl.sh"
+                        color: "var(--catppuccin-color-blue)",
+                        href: "https://tangled.sh/@banana.tngl.sh"
                     },
-                    {
-                        icon: Butterfly,
-                        color: "var(--catppuccin-color-sapphire)",
-                        href: "https://bsky.app/profile/imabanana80.com",
-                        svg: true
-                    }
                 ]}
                 size='20'
             />
         </span>
         <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
             <Label name="Currently"/>
-            Daily driving archlinux | Open for Hire
+            Daily driving nixos | Open for Hire
         </span>
         <span class="relative p-3 mt-4 border border-ctp-surface0 text-sm">
             <Label name="About"/>
